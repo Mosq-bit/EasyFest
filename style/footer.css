@@ -1,0 +1,205 @@
+.footer__section {
+    padding: 30px 0 18px;
+    background: var(--goluboy-1);
+}
+
+.footer__wrapper {
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1200px; /* Добавил ограничение максимальной ширины */
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap; /* Добавил перенос на маленьких экранах */
+    justify-content: space-between;
+    gap: 30px; /* Уменьшил gap для мобильных */
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap; /* Добавил перенос колонок */
+    justify-content: space-between;
+    gap: 30px; /* Уменьшил gap для мобильных */
+    width: 100%; /* Занимает всю ширину на мобильных */
+}
+
+.footer__nav-column:nth-child(3) {
+    margin-left: 0; /* Убрал фиксированный отступ для адаптивности */
+}
+
+.footer__list {
+    width: 100%;
+    max-width: 150px; /* Увеличил для лучшего отображения текста */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__item {
+    cursor: pointer;
+}
+
+.footer__link,
+.footer__subtitle,
+.footer__email {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #9ecdf6;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+}
+
+.footer__link:hover,
+.footer__subtitle:hover,
+.footer__email:hover {
+    color: var(--beeeelyyyyy);
+}
+
+.footer__contacts {
+    margin-left: 0; /* Убрал фиксированный отступ */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Занимает всю ширину на мобильных */
+}
+
+.footer__social-apps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social__links {
+    display: flex;
+    gap: 15px;
+}
+
+.social__link {
+    display: inline-block;
+}
+
+.social__icon {
+    width: 20px;
+    height: 15px;
+    fill: #9ecdf6;
+    transition: all 0.4s ease-in;
+}
+
+.social__icon:hover {
+    border-radius: 1px;
+    stroke: var(--beeeelyyyyy);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.footer__apps {
+    margin-left: 0; /* Убрал фиксированный отступ */
+}
+
+.app__links {
+    display: flex;
+    gap: 15px; /* Уменьшил gap для мобильных */
+    flex-wrap: wrap; /* Добавил перенос иконок */
+}
+
+.app__link {
+    display: inline-block;
+}
+
+.app__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column; /* Колонка на мобильных */
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__copyright,
+.footer__link-copy {
+    display: flex;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 8px;
+    color: var(--beeeelyyyyy);
+}
+
+.footer__link-copy {
+    text-decoration: underline;
+}
+
+.footer__developer {
+    display: flex;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 275%;
+    color: #9ecdf6;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+    .footer__wrapper {
+        padding: 0 20px;
+    }
+    
+    .footer__content {
+        flex-wrap: nowrap;
+        gap: 50px;
+    }
+    
+    .footer__nav {
+        flex-wrap: nowrap;
+        gap: 50px;
+        width: auto;
+    }
+    
+    .footer__nav-column:nth-child(3) {
+        margin-left: 23px;
+    }
+    
+    .footer__contacts {
+        margin-left: 30px;
+        width: auto;
+    }
+    
+    .footer__social-apps {
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+    }
+    
+    .footer__apps {
+        margin-left: 22px;
+    }
+    
+    .app__links {
+        gap: 36px;
+    }
+    
+    .footer__bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer__wrapper {
+        padding: 0;
+    }
+}

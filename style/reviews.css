@@ -1,0 +1,219 @@
+.reviews__section {
+    padding: 20px 0;
+}
+
+.reviews__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.reviews__img {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* Центрируем изображение на мобильных */
+}
+
+.reviews__img::before {
+    position: absolute;
+    content: url(/assets/label__mini.png);
+    width: 80px;
+    /* Фиксируем размер для лучшего контроля */
+    height: auto;
+    top: 32%;
+    left: 38%;
+    transform: translate(30%, -50%);
+    /* Позиционируем относительно центра */
+    z-index: 2;
+}
+
+.reviews-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Добавляем скругление */
+}
+
+.reviews__content {
+    width: 100%;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 300px;
+}
+
+.reviews__title {
+    font-weight: 500;
+    font-size: clamp(25px, 4vw, 35px);
+    color: var(--aktiven);
+    line-height: 1.3;
+}
+
+.reviews__rating {
+    margin-top: 20px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    /* Изменено для мобильных */
+    gap: 15px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--karandashik);
+}
+
+.rating__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 120px;
+    /* Чтобы не ломалась структура */
+}
+
+.rating__title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.user-name {
+    font-size: 14px;
+    color: var(--ne-aktiven);
+}
+
+.rating__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.rating__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.reviews-label {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--ne-aktiven);
+    min-width: 70px;
+    /* Фиксируем ширину для выравнивания */
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rating-icon {
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+}
+
+.rating-count {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--aktiven);
+}
+
+.reviews__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--aktiven);
+    line-height: 1.5;
+}
+
+/* Медиа-запросы для адаптива */
+@media (max-width: 992px) {
+    .reviews__wrapper {
+        gap: 30px;
+    }
+
+    .reviews__img::before {
+        top: 32%;
+        left: 32%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews__wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .reviews__content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .reviews__img {
+        max-width: 80%;
+    }
+
+    .reviews__img::before {
+        width: 60px;
+        transform: translate(40%, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews__section {
+        padding: 15px 0;
+    }
+
+    .reviews__wrapper {
+        gap: 20px;
+    }
+
+    .reviews__img {
+        max-width: 100%;
+    }
+
+    .reviews__img::before {
+        width: 50px;
+        transform: translate(50%, -50%);
+    }
+
+    .reviews__title {
+        font-size: 22px;
+    }
+
+    .reviews__rating {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .rating__info {
+        width: 100%;
+    }
+
+    .rating__stats {
+        width: 100%;
+    }
+
+    .rating__row {
+        justify-content: space-between;
+    }
+
+    .reviews__text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .reviews__img::before {
+        width: 40px;
+        transform: translate(60%, -50%);
+        top: 80px;
+        left: 70px;
+    }
+}
