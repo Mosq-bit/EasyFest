@@ -19,7 +19,7 @@
 
 .reviews__img::before {
     position: absolute;
-    content: url(/assets/label__mini.png);
+    content: url(/EasyFest/assets/label__mini.png);
     width: 80px;
     /* Фиксируем размер для лучшего контроля */
     height: auto;
