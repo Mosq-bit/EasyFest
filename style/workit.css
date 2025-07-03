@@ -22,7 +22,7 @@
 .workit__section::before {
     position: absolute;
     content: "";
-    background-image: url(/assets/workit-circule.png);
+    background-image: url(/EasyFest/assets/workit-circule.png);
     top: 161px;
     left: 78px;
     z-index: 1;
