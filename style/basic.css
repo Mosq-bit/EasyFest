@@ -16,7 +16,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: var(--aktiven);
-    background-image: url(.EasyFest/assets/bg.jpg);
+    background-image: url(/EasyFest/assets/bg.jpg);
 
 }
 
